@@ -19,21 +19,21 @@ function oneRound(playerSelection, computerSelection) {
     (playerSelection === "scissors" && computerSelection === "paper") ||
     (playerSelection === "paper" && computerSelection === "rock")) {
     alert(`You win! ${playerSelection} beats ${computerSelection}`);
-    score("player")
+    return score("player")
 
   } else if ((playerSelection === "rock" && computerSelection === "paper") ||
     (playerSelection === "scissors" && computerSelection === "rock") ||
     (playerSelection === "paper" && computerSelection === "scissors")) {
     alert(`You lose! ${playerSelection} loses to ${computerSelection}`);
-    score("computer")
+    return score("computer")
 
   } else if (playerSelection === computerSelection) {
     alert(`It's a tie! ${playerSelection} ties with ${computerSelection}`);
-    score()
+    return score()
 
   } else {
     alert("Not a valid option!");
-    score()
+    return score()
   }
 }
 
@@ -57,11 +57,11 @@ function game() {
     oneRound(playerPlay(), computerPlay());
 
   if (userScore > computerScore) {
-    return alert("You Win!")
+    alert("You Win!")
   } else if (userScore < computerScore) {
-    return alert("You lose!")
+    alert("You lose!")
   } else {
-    return alert("It's a tie!")
+    alert("It's a tie!")
   }
 }
 
