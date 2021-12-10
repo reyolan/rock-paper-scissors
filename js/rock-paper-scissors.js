@@ -32,8 +32,8 @@ function oneRound(playerSelection, computerSelection) {
     return score()
 
   } else {
-    alert("Not a valid option!");
-    return score()
+    alert("Not a valid option! Computer gets the score!");
+    return score("computer")
   }
 }
 
@@ -54,7 +54,7 @@ function score(winner) {
 function game() {
 
   let rounds = parseInt(prompt("How many rounds?"))
-  isNaN(rounds);
+
 
   if (rounds) {
     for (rounds; rounds > 0; rounds--)
@@ -68,10 +68,8 @@ function game() {
     }
   } else {
     alert("Invalid input!")
+
   }
 }
-
-
-
 
 game();
