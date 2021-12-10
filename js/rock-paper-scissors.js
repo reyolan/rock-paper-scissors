@@ -50,19 +50,28 @@ function score(winner) {
   }
 }
 
-/*5 rounds of Rock, Paper, and Scissors*/
+/*Rounds of Rock, Paper, and Scissors*/
 function game() {
 
-  for (let counter = 0; counter < 5; counter++)
-    oneRound(playerPlay(), computerPlay());
+  let rounds = parseInt(prompt("How many rounds?"))
+  isNaN(rounds);
 
-  if (userScore > computerScore) {
-    alert("You Win!")
-  } else if (userScore < computerScore) {
-    alert("You lose!")
+  if (rounds) {
+    for (rounds; rounds > 0; rounds--)
+      oneRound(playerPlay(), computerPlay());
+    if (userScore > computerScore) {
+      alert("You Win!")
+    } else if (userScore < computerScore) {
+      alert("You lose!")
+    } else {
+      alert("It's a tie!")
+    }
   } else {
-    alert("It's a tie!")
+    alert("Invalid input!")
   }
 }
+
+
+
 
 game();
