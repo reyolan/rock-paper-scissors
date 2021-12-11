@@ -51,25 +51,29 @@ function trackScore(winner) {
   }
 }
 
+// Declare win
+function declareWin() {
+  if (userScore > computerScore) {
+    alert("You Win!")
+  } else if (userScore < computerScore) {
+    alert("You lose!")
+  } else {
+    alert("It's a tie!")
+  }
+}
+
 // Rounds of Rock, Paper, and Scissors
 function game() {
 
   let rounds = parseInt(prompt("How many rounds?"))
 
-
   if (rounds) {
-    for (rounds; rounds > 0; rounds--)
+    for (rounds; rounds > 0; rounds--) {
       playRound(playPlayer(), playComputer());
-    if (userScore > computerScore) {
-      alert("You Win!")
-    } else if (userScore < computerScore) {
-      alert("You lose!")
-    } else {
-      alert("It's a tie!")
     }
+    declareWin();
   } else {
     alert("Invalid input!")
-
   }
 }
 
