@@ -1,12 +1,13 @@
 let userScore = 0;
 let computerScore = 0;
 
+// Player picks between RPS
 function playPlayer() {
   let playerSelect = prompt("Rock, Paper, or Scissors?");
   return playerSelect.toLowerCase();
 }
 
-// Computer picks between rock paper and scissors in an array
+// Computer picks between RPS
 function playComputer() {
   let compChoices = ["rock", "paper", "scissors"];
   return compChoices[Math.floor(Math.random() * compChoices.length)];
@@ -50,7 +51,7 @@ function trackScore(winner) {
   }
 }
 
-/*Rounds of Rock, Paper, and Scissors*/
+// Rounds of Rock, Paper, and Scissors
 function game() {
 
   let rounds = parseInt(prompt("How many rounds?"))
